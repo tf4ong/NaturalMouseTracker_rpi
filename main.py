@@ -83,8 +83,8 @@ class rpi_recorder():
         self.video.setdown()
 
         # Displays the fps and frame counts on terminal
-        fc.get_video_frame_count(rc.data_path)
-        fc.get_txt_frame_count(rc.data_path)
+        #fc.get_video_frame_count(rc.data_path)
+        #fc.get_txt_frame_count(rc.data_path)
 
         # Post process the video to match FPS if specified by user
         if self.fps_post_process == "True":
