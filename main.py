@@ -48,6 +48,8 @@ class rpi_recorder():
         self.reader1 = RFID_reader('/dev/ttyUSB1', '1')
         self.reader2 = RFID_reader('/dev/ttyUSB2', '2')
         self.reader3 = RFID_reader('/dev/ttyUSB3', '3')
+        self.reader4 = RFID_reader('/dev/ttyUSB3', '4')
+        self.reader5 = RFID_reader('/dev/ttyUSB3', '5')
 
     def run(self):
         """Main function that opens threads and runs :class: 'pi_video_stream' in main thread. In each thread,
@@ -59,12 +61,17 @@ class rpi_recorder():
         t_rfid1 = Thread(target=self.reader1.scan, daemon=True)
         t_rfid2 = Thread(target=self.reader2.scan, daemon=True)
         t_rfid3 = Thread(target=self.reader3.scan, daemon=True)
+        t_rfid4 = Thread(target=self.reader4.scan, daemon=True)
+        t_rfid5 = Thread(target=self.reader5.scan, daemon=True)
+        
 
         # Start threads
         t_rfid0.start()
         t_rfid1.start()
         t_rfid2.start()
         t_rfid3.start()
+        t_rfid4.start()
+        t_rfid5.start()
 
         # keyboard interrupt handler, stops program once ctrl-c is pressed
         def keyboardInterruptHandler(signal, frame):
