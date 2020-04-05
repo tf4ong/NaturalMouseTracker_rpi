@@ -10,18 +10,18 @@ from RFID_reader import RFID_reader
 from configparser import ConfigParser
 from threading import Thread
 import frame_counter as fc
-from datalogger import datalogger
+import datalogger
 
 
 class rpi_recorder():
-    """:class: 'rpi_recorder' is the top level class of natural mouse tracker. It creates :class: 'RFID_reader' objects
-    which run in separate threads, and also runs camera recording in the main loop. User config files can be found in 
+    """:class:`rpi_recorder` is the top level class of natural mouse tracker. It creates :class:`RFID_reader` objects \
+    which run in separate threads, and also runs camera recording in the main loop. User config files can be found in \
     'config.ini'
     """
 
     def __init__(self):
-        """Constructor for :class: 'recorder'. Loads the config file 'config.ini' and creates a :class:'pi_video_stream' 
-        object and four :class:'RFID_reader' objects.
+        """Constructor for :class:`recorder`. Loads the config file 'config.ini' and creates a :class:`pi_video_stream` 
+        object and four :class:`RFID_reader` objects.
         """
         # Load configs
         config = ConfigParser()
@@ -52,9 +52,9 @@ class rpi_recorder():
         self.reader5 = RFID_reader('/dev/ttyUSB3', '5')
 
     def run(self):
-        """Main function that opens threads and runs :class: 'pi_video_stream' in main thread. In each thread,
-         :class:'RFID_reader' checks for RFID pickup. The pickup data is then logged to a text file 
-         by :class: 'pi_video_stream'.
+        """Main function that opens threads and runs :class:`pi_video_stream` in main thread. In each thread,
+         :class:`RFID_reader` checks for RFID pickup. The pickup data is then logged to a text file 
+         by :class: `pi_video_stream`.
         """
         # Make threads for different objects
         t_rfid0 = Thread(target=self.reader0.scan, daemon=True)
@@ -84,7 +84,7 @@ class rpi_recorder():
         
 
     def setdown(self):
-        """Shuts down the :class:'pi_video_stream' object and :class:'RFID_reader' objects. 
+        """Shuts down the :class:`pi_video_stream` object and :class:`RFID_reader` objects. 
         Note that this method has to execute for the video and txt files to save properly.
         """
         self.video.setdown()

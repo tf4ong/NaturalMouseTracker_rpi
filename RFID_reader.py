@@ -7,7 +7,7 @@ from datetime import datetime
 
 from RFIDTagReader.RFIDTagReader import TagReader
 import pi_video_stream
-from datalogger import datalogger
+import datalogger
 
 class RFID_reader():
     def __init__(self, pin, ID):
@@ -26,7 +26,7 @@ class RFID_reader():
 
 
     def scan(self):
-        """Scans the RFID reader and if any mice is detected, log the tag with the :class: 'datalogger' object
+        """Scans the RFID reader and if any mice is detected, log the tag with the :class:`datalogger` object
         """
         while True:
             try:

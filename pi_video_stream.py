@@ -14,18 +14,17 @@ import os
 import tables
 import csv
 import io
-
-from datalogger import datalogger
+import datalogger
 
 class pi_video_stream():
     def __init__(self, data_path, recorder):
-        """Constructor for :class: 'pi_video_stream' object. Creates a :class: 'PiCamera' object and loads the settings
+        """Constructor for :class:`pi_video_stream` object. Creates a :class:`PiCamera` object and loads the settings
         from 'config.ini' for camera. 
         
         :param data_path: path to and name of the folder where video(s) will be saved
         :type data_path: string
         :param recorder: recorder object; contains information of RFID readers
-        :type recorder: :class: 'recorder' object
+        :type recorder: :class:`recorder` object
         """
         # Read config file
         config = ConfigParser()
