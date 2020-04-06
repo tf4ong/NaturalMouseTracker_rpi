@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pi_video_stream module &mdash; Natural Mouse Tracker Recording Module 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="main module" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Natural Mouse Tracker Recording Module
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">NaturalMouseTracker_rpi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="RFID_reader.html">RFID_reader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalogger.html">datalogger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="frame_counter.html">frame_counter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pi_video_stream module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Natural Mouse Tracker Recording Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">NaturalMouseTracker_rpi</a> &raquo;</li>
+        
+      <li>pi_video_stream module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pi_video_stream.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pi_video_stream">
+<span id="pi-video-stream-module"></span><h1>pi_video_stream module<a class="headerlink" href="#module-pi_video_stream" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pi_video_stream.pi_video_stream">
+<em class="property">class </em><code class="sig-prename descclassname">pi_video_stream.</code><code class="sig-name descname">pi_video_stream</code><span class="sig-paren">(</span><em class="sig-param">data_path</em>, <em class="sig-param">recorder</em><span class="sig-paren">)</span><a class="headerlink" href="#pi_video_stream.pi_video_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pi_video_stream.pi_video_stream.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data_path</em>, <em class="sig-param">recorder</em><span class="sig-paren">)</span><a class="headerlink" href="#pi_video_stream.pi_video_stream.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for <a class="reference internal" href="#module-pi_video_stream" title="pi_video_stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">pi_video_stream</span></code></a> object. Creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">PiCamera</span></code> object and loads the settings
+from ‘config.ini’ for camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>string</em>) – path to and name of the folder where video(s) will be saved</p></li>
+<li><p><strong>recorder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">recorder</span></code> object) – recorder object; contains information of RFID readers</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pi_video_stream.pi_video_stream.post_process">
+<code class="sig-name descname">post_process</code><span class="sig-paren">(</span><em class="sig-param">fps</em><span class="sig-paren">)</span><a class="headerlink" href="#pi_video_stream.pi_video_stream.post_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the ‘raw.avi’ video and produces a new video ‘fps_corrected.avi’ such that the latter video 
+has the specified FPS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fps</strong> (<em>integer</em>) – frame rate (frames per second) to be matched towards</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pi_video_stream.pi_video_stream.record">
+<code class="sig-name descname">record</code><span class="sig-paren">(</span><em class="sig-param">duration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pi_video_stream.pi_video_stream.record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a video stream that captures frame by frame and compiles into a video. Also writes the frame count,
+time stamp, and RFID readings into a text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>duration</strong> (<em>integer</em><em>, </em><em>optional</em>) – time of record duration in seconds, defaults to None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pi_video_stream.pi_video_stream.setdown">
+<code class="sig-name descname">setdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pi_video_stream.pi_video_stream.setdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the recording and text file, stops camera preview, and display time and FPS on terminal.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="main.html" class="btn btn-neutral float-left" title="main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Alice Xiong
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
