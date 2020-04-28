@@ -12,3 +12,5 @@ cd NaturalMouseTracker_rpi
 
 python3 main.py
 ```
+
+The documentation for this recording module can be found here: https://ubcbraincircuits.github.io/NaturalMouseTracker_rpi/main.html
